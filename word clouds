@@ -1,0 +1,14 @@
+### sentiment word examples
+_positive_ = 'increase, growth, profit' #@param {type:"string"}
+_negative_ = 'reduce, decline' #@param {type:"string"}
+_neutral_ = 'remained, none' #@param {type:"string"}
+
+### simple dataset analysis below:
+### df_train = get_finance_train()
+### print(df_train.head())
+
+negative_data = df_train[df_train["Label"] == 0]
+plot_word_cloud(negative_data)
+
+positive_data = df_train[df_train["Label"] == 2]
+plot_word_cloud(positive_data)
